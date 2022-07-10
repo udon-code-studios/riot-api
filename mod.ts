@@ -1,3 +1,9 @@
+/**
+ * Provides functions and response types to interact with the Riot API.
+ *
+ * @module
+ */
+
 export * as routes from "./api/routes.ts"; // routing value enums
 export * as league from "./api/league/funcs.ts"; // LEAGUE-V4
 export type { LeagueEntryDTO } from "./api/league/types.ts";
