@@ -20,3 +20,18 @@ export enum Regional {
   EUROPE = "euw1.api.riotgames.com", // EUN1, EUW1, TR1, RU
   SEA = "jp1.api.riotgames.com", // ?
 }
+
+/** Get a platform's corresponding regional route. */
+export function PlatformToRegional(platform: Platform): Regional {
+  switch (platform) {
+    case (Platform.BR1, Platform.LA1, Platform.LA2, Platform.NA1, Platform.OC1):
+      return Regional.AMERICAS;
+    case (Platform.JP1, Platform.KR):
+      return Regional.ASIA;
+    case (Platform.EUN1, Platform.EUW1, Platform.TR1, Platform.RU):
+      return Regional.EUROPE;
+    // default return AMERICAS
+    default:
+      return Regional.AMERICAS;
+  }
+}
