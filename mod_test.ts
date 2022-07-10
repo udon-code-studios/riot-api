@@ -7,6 +7,7 @@ Deno.test({
   name: "public API assertions",
   fn() {
     assert(mod != null);
+    assertEquals(typeof mod.league.bySummonerId, "function");
     assertEquals(typeof mod.summoner.byName, "function");
   },
 });
