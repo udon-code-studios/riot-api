@@ -1,4 +1,6 @@
 export * as routes from "./api/routes.ts"; // routing value enums
+export * as league from "./api/league/funcs.ts"; // LEAGUE-V4
+export type { LeagueEntryDTO } from "./api/league/types.ts";
 export * as summoner from "./api/summoner/funcs.ts"; // SUMMONER-V4
 export type { SummonerDTO } from "./api/summoner/types.ts";
 
