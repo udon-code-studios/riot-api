@@ -1,4 +1,7 @@
 {
+  "compilerOptions": {
+    "types": ["./api/summoner/types.d.ts"]
+  },
   "fmt": {
     "options": {
       "useTabs": false,
