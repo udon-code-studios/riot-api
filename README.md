@@ -3,7 +3,7 @@
 [![deno docs][deno-docs-image]][deno-docs-url]
 [![NPM Version][npm-version-image]][npm-url]
 
-A Deno library which provides functions and response types (DTOs) to interact with the Riot Games API.
+A Deno (and Node) library which provides functions and response types (DTOs) to interact with the Riot Games API.
 
 ## Deno example
 
