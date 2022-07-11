@@ -14,7 +14,7 @@ export async function byName(
   // extract JSON on 200 status
   let summoner: SummonerDTO | undefined = undefined;
   if (resp.status === 200) {
-    summoner = await resp.json();
+    summoner = (await resp.json()) as SummonerDTO;
   }
 
   return { status: resp.status, summoner: summoner };

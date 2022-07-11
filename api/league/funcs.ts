@@ -14,7 +14,7 @@ export async function bySummonerId(
   // extract JSON on 200 status
   let leagueEntry: LeagueEntryDTO | undefined = undefined;
   if (resp.status === 200) {
-    leagueEntry = await resp.json();
+    leagueEntry = (await resp.json()) as LeagueEntryDTO;
   }
 
   return { status: resp.status, leagueEntry: leagueEntry };
