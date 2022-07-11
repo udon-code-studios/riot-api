@@ -7,8 +7,9 @@ Usage Docs: https://doc.deno.land/https://deno.land/x/riot_api/mod.ts
 ## Deno example
 
 #### code: `example.ts`
+
 ```ts
-import * as riot from "https://deno.land/x/riot_api@v0.0.4-alpha/mod.ts";
+import * as riot from "https://deno.land/x/riot_api/mod.ts";
 
 const resp = await riot.summoner.byName("Rocket the dog", { region: riot.routes.Platform.NA1 });
 
@@ -17,11 +18,13 @@ console.log("SummonerDTO:", resp.summoner);
 ```
 
 #### command:
+
 ```sh
 deno run --allow-env --allow-net example.ts
 ```
 
 #### output:
+
 ```
 Status Code: 200
 SummonerDTO: {
@@ -40,6 +43,7 @@ SummonerDTO: {
 Usage in Node is identical to the above Deno example.
 
 Two changes need to be made since the package system is handled differently in NPM:
+
 - Install package using `npm i udon-riot-api`
 - Change import statement to `import * as riot from "udon-riot-api";`
 
