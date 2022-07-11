@@ -42,12 +42,11 @@ SummonerDTO: {
 
 Usage in Node is identical to the above Deno example.
 
-Two changes need to be made since the package system is handled differently in NPM:
+Install the package using `npm i udon-riot-api`
 
-- Install package using `npm i udon-riot-api`
-- Change import statement to `import * as riot from "udon-riot-api";`
+Change the import statement to `import * as riot from "udon-riot-api";`
 
-View the NPM package here: https://www.npmjs.com/package/udon-riot-api
+https://www.npmjs.com/package/udon-riot-api
 
 ## Help
 
