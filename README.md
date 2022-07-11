@@ -1,8 +1,9 @@
 # riot_api
 
-A Deno library which provides functions and response types (DTOs) to interact with the Riot Games API.
+[![deno docs][deno-docs-image]][deno-docs-url]
+[![NPM Version][npm-version-image]][npm-url]
 
-Usage Docs: https://doc.deno.land/https://deno.land/x/riot_api/mod.ts
+A Deno library which provides functions and response types (DTOs) to interact with the Riot Games API.
 
 ## Deno example
 
@@ -51,3 +52,8 @@ https://www.npmjs.com/package/udon-riot-api
 ## Help
 
 Feel free to reach out to me at my personal email (leo.battalora@gmail.com) or open an issue in the ![Issues tab](https://github.com/udon-code-studios/riot-api/issues).
+
+[deno-docs-image]: https://doc.deno.land/badge.svg
+[deno-docs-url]: https://doc.deno.land/https://deno.land/x/riot_api/mod.ts
+[npm-version-image]: https://badgen.net/npm/v/udon-riot-api
+[npm-url]: https://npmjs.org/package/udon-riot-api
