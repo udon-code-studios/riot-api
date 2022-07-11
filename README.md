@@ -47,8 +47,6 @@ Install the package using `npm i udon-riot-api`
 
 Change the import statement to `import * as riot from "udon-riot-api";`
 
-https://www.npmjs.com/package/udon-riot-api
-
 ## Help
 
 Feel free to reach out to me at my personal email (leo.battalora@gmail.com) or open an issue in the ![Issues tab](https://github.com/udon-code-studios/riot-api/issues).
