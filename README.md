@@ -2,6 +2,8 @@
 
 A Deno library which provides functions and response types (DTOs) to interact with the Riot Games API.
 
+Usage Docs: https://doc.deno.land/https://deno.land/x/riot_api/mod.ts
+
 ## Deno example
 
 #### code: `example.ts`
