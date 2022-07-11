@@ -1,3 +1,10 @@
+/**
+ * usage:
+ *  deno run -A scripts/build_npm.ts <version-tag>
+ *  cd npm
+ *  npm publish
+ */
+
 import { build, emptyDir } from "https://deno.land/x/dnt@0.28.0/mod.ts";
 
 await emptyDir("./npm");
@@ -11,6 +18,7 @@ await build({
     // see JS docs for overview and more options
     deno: true,
     custom: [
+      // shim for fetch
       {
         package: {
           name: "node-fetch",
