@@ -5,17 +5,17 @@ import { LeagueEntryDTO } from "./types.ts";
 export async function bySummonerId(
   summonerId: string,
   options: { region: Platform }
-): Promise<{ status: number; leagueEntry?: LeagueEntryDTO }> {
+): Promise<{ status: number; leagueEntry?: LeagueEntryDTO[] }> {
   // make HTTP request
-  const resp = await fetch(`https://${options.region}/league/v4/entries/by-summoner/${summonerId}`, {
+  const resp = await fetch(`https://${options.region}/lol/league/v4/entries/by-summoner/${summonerId}`, {
     headers: { "X-Riot-Token": window.RIOT_API_KEY || "" },
   });
 
   // extract JSON on 200 status
-  let leagueEntry: LeagueEntryDTO | undefined = undefined;
+  let leagueEntry: LeagueEntryDTO[] | undefined = undefined;
   if (resp.status === 200) {
-    leagueEntry = (await resp.json()) as LeagueEntryDTO;
+    leagueEntry = (await resp.json()) as LeagueEntryDTO[];
   }
 
-  return { status: resp.status, leagueEntry: leagueEntry };
+  return { status: resp.status, leagueEntry };
 }
