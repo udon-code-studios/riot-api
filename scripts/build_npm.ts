@@ -41,7 +41,7 @@ await build({
   },
   package: {
     // package.json properties
-    name: "riot-api",
+    name: "udon-riot-api",
     version: Deno.args[0],
     description: "Provides functions and response types to interact with the Riot API.",
     license: "MIT",
