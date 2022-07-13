@@ -15,10 +15,10 @@ export enum Platform {
 
 /** Regional Routing Values (Last updated: 2022/07/10) https://developer.riotgames.com/docs/lol */
 export enum Regional {
-  AMERICAS = "br1.api.riotgames.com", // BR1, LA1, LA2, NA1, OC1
-  ASIA = "eun1.api.riotgames.com", // JP1, KR
-  EUROPE = "euw1.api.riotgames.com", // EUN1, EUW1, TR1, RU
-  SEA = "jp1.api.riotgames.com", // ?
+  AMERICAS = "americas.api.riotgames.com", // BR1, LA1, LA2, NA1, OC1
+  ASIA = "asia.api.riotgames.com", // JP1, KR
+  EUROPE = "europe.api.riotgames.com", // EUN1, EUW1, TR1, RU
+  SEA = "sea.api.riotgames.com", // ?
 }
 
 /** Get a platform's corresponding regional route. */
