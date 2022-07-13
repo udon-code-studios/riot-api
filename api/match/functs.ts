@@ -1,6 +1,7 @@
 import { Regional } from "../routes.ts";
+import { MatchDTO } from "./types.ts";
 
-/** Get a list of match ids by puuid. */
+/** Get a list of matches ids by puuid. */
 export async function byPuuid(
   puuid: string,
   options: {
@@ -40,4 +41,25 @@ export async function byPuuid(
   }
 
   return { status: resp.status, matches };
+}
+
+/** Get a match by match ID. */
+export async function match(
+  matchId: string,
+  options: {
+    region: Regional;
+  }
+): Promise<{ status: number; match?: MatchDTO }> {
+  // make HTTP request
+  const resp = await fetch(`https://${options.region}/lol/match/v5/matches/${matchId}`, {
+    headers: { "X-Riot-Token": window.RIOT_API_KEY || "" },
+  });
+
+  // extract JSON on 200 status
+  let match: MatchDTO | undefined = undefined;
+  if (resp.status === 200) {
+    match = (await resp.json()) as MatchDTO;
+  }
+
+  return { status: resp.status, match };
 }
