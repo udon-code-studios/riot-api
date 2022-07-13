@@ -9,6 +9,7 @@ export * as league from "./api/league/funcs.ts"; // LEAGUE-V4
 export type { LeagueEntryDTO } from "./api/league/types.ts";
 export * as summoner from "./api/summoner/funcs.ts"; // SUMMONER-V4
 export type { SummonerDTO } from "./api/summoner/types.ts";
+export * as match from "./api/match/functs.ts"; // MATCH-V4
 
 // define global interface
 declare global {
