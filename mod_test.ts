@@ -9,5 +9,6 @@ Deno.test({
     assert(mod != null);
     assertEquals(typeof mod.league.bySummonerId, "function");
     assertEquals(typeof mod.summoner.byName, "function");
+    assertEquals(typeof mod.match.byPuuid, "function");
   },
 });
