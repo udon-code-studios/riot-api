@@ -19,8 +19,17 @@ export async function byPuuid(
     count?: number;
   }
 ): Promise<{ status: number; matches?: string[] }> {
+  // build query string from options
+  const queryString =
+    (options.startTime ? `?startTime=${options.startTime}&` : "?") +
+    (options.endTime ? `endTime=${options.endTime}&` : "") +
+    (options.queue ? `queue=${options.queue}&` : "") +
+    (options.type ? `type=${options.type}&` : "") +
+    (options.start ? `start=${options.start}&` : "") +
+    (options.count ? `count=${options.count}&` : "");
+
   // make HTTP request
-  const resp = await fetch(`https://${options.region}/lol/match/v5/matches/by-puuid/${puuid}/ids`, {
+  const resp = await fetch(`https://${options.region}/lol/match/v5/matches/by-puuid/${puuid}/ids${queryString}`, {
     headers: { "X-Riot-Token": window.RIOT_API_KEY || "" },
   });
 
